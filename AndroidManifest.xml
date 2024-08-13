@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/vivifylognoback"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/vivifylognoback"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Vivify_technocrats"
+        tools:targetApi="31">
+        <activity
+            android:name=".separate"
+            android:exported="false" />
+        <activity
+            android:name=".ResetThing"
+            android:exported="false" />
+        <activity
+            android:name=".FreshActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResetNewPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VerifyOtp"
+            android:exported="false" />
+        <activity
+            android:name=".SendOtp"
+            android:exported="false" />
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SecondsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FCM.GetThread"
+            android:exported="false" />
+        <activity
+            android:name=".LoginPhoneNumberActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginOtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".googlemap"
+            android:exported="false" />
+        <activity
+            android:name=".NewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Go_for_mcq"
+            android:exported="false" />
+        <activity
+            android:name=".Go_for_safety_video"
+            android:exported="false" />
+        <activity
+            android:name=".UserHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="false" /> <!-- Splash Activity -->
+        <activity
+            android:name=".Splash"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:logo="@drawable/vivifylognoback"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Other Activities -->
+        <activity
+            android:name=".UserActivity"
+            android:exported="false" /> <!-- ... other activities ... -->
+        <activity
+            android:name=".PlayingVideos"
+            android:exported="false" />
+        <activity
+            android:name=".WonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" /> <!-- Signup Activity -->
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true">
+
+            <!-- Intent filter if needed -->
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDzrojezPIcnyYh0XDg8Z8Xx2kTF2rAAY0" />
+    </application>
+
+</manifest>

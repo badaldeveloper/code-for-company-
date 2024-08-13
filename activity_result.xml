@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_quiz"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="322dp"
+        android:layout_height="94dp"
+        android:text="Thanks for giving your valuable time"
+        android:textColor="#CEE117"
+        android:textSize="34sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.417" />
+
+    <ImageView
+        android:id="@+id/ic_back2"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/arrowbackbutton1"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ic_exitbutton3"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/ic_exitbutton3"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/exitbutton"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        app:tint="@color/white" />
+
+    <Button
+        android:id="@+id/userhistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap to See User History"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/goforlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go for Location"
+        app:layout_constraintBottom_toTopOf="@+id/userhistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stastistical Report"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userhistory"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

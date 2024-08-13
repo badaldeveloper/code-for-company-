@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#003366"
+    tools:context=".UserActivity">
+
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="137dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_person"
+        app:layout_constraintEnd_toStartOf="@+id/uploadImageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Upload Image Button -->
+    <Button
+        android:id="@+id/uploadImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
+        android:text="Upload"
+        app:layout_constraintStart_toEndOf="@id/profileImageView"
+        app:layout_constraintTop_toTopOf="@id/profileImageView" />
+
+    <!-- Name TextInputLayout wrapped in CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/nameCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/cardBackgroundColor"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileImageView">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name">
+
+            <TextView
+                android:id="@+id/userNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Date TextView wrapped in CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dateCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/cardBackgroundColor"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameCardView">
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Date: "
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Time TextView wrapped in CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/timeCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/cardBackgroundColor"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateCardView">
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Time: "
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView for Helmet Buttons -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/helmetCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/cardBackgroundColor"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeCardView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Do You have safety helmet ?"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/helmetYesButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Yes" />
+
+                <Button
+                    android:id="@+id/helmetNoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView for Shoe Buttons -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/shoeCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/cardBackgroundColor"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/helmetCardView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Do you have safety shoe ?"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/shoeYesButton"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="Yes" />
+
+                <Button
+                    android:id="@+id/shoeNoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Submit and Back Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Submit" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Back" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
